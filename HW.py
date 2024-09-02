@@ -52,7 +52,7 @@ if response.status_code == 200:
             print("Рейтинг:", venue["rating"] if 'rating' in venue else "Рейтинг не найден.")
             print("\n")
         except KeyError as e:
-            logging.error(f"Отсутствует ожидаемое поле в ответе: {e}")
+            logging.error(f"Отсутствует поле : {e}")
 
     logging.info(f"Статус запроса: {response.status_code}")
 else:
