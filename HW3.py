@@ -1,7 +1,7 @@
 import pymongo
 import json
 
-# Подключение к MongoDB
+# MongoDB
 try:
     client = pymongo.MongoClient("mongodb://localhost:27017/")
     print("Успешно подключено к MongoDB")
@@ -9,7 +9,7 @@ except pymongo.errors.ConnectionError as e:
     print(f"Ошибка подключения к MongoDB: {e}")
     exit(1)
 
-# Создание базы данных
+# Создание БД
 database_name = "HW3"
 database = client[database_name]
 
