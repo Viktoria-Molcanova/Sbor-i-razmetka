@@ -37,3 +37,11 @@ except pymongo.errors.BulkWriteError as e:
     print(f"Ошибка при вставке данных: {e.details}")
 except Exception as e:
     print(f"Произошла ошибка: {e}")
+    
+# Получение всех документов из коллекции
+try:
+    all_books = collection.find()
+    for book in all_books:
+        print(book)
+except Exception as e:
+    print(f"Ошибка при выполнении запроса: {e}")
